@@ -18,8 +18,8 @@ end
 
 local function prep_files()
     local pid = vim.fn.getpid()
-    M.rundir = vim.fn.stdpath("run") .. "/nvim/reg/"
-    M.logdir = vim.fn.stdpath("log") .. "/reg/"
+    M.rundir = vim.fn.stdpath("run") .. "/nvim/reg"
+    M.logdir = vim.fn.stdpath("log") .. "/reg"
 
     -- TODO use uv
     os.execute("mkdir -p '" .. M.rundir .. "'")
