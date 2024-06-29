@@ -14,7 +14,7 @@ function M.start_server(socket_path, processor)
         local result = processor(request)
         local response
         if type(result) == "number" then
-            response = "" .. result .. "\n"
+            response = "" .. result
         else
             response = "0\n" .. result
         end

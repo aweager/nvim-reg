@@ -23,6 +23,7 @@ local function prep_files()
 
     -- TODO use uv
     os.execute("mkdir -p '" .. M.rundir .. "'")
+    os.execute("chmod 1700 '" .. M.rundir .. "'")
     os.execute("mkdir -p '" .. M.logdir .. "'")
 
     M.reg_socket = M.rundir .. "/" .. pid .. ".reg.sock"
