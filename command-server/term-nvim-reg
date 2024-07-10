@@ -6,10 +6,8 @@ local -a pids
 local link
 for link in "$links[@]"; do
     if [[ -n "$link" ]]; then
-        reg -I "$link" unlink "$REG_SOCKET" &
-        pids+=($!)
+        reg -bb -I "$link" unlink "$REG_SOCKET"
     fi
 done
-wait "$pids[@]"
 
 command-server-terminate "$REG_SOCKET"
